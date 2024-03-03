@@ -1,53 +1,42 @@
-import java.util.Scanner;
-class Books
-{
-String name,author;
-int price,numpages;
-Books(){}
-Books(String name,String author,int price,int numpages)
-{
-this.name=name;
-this.author=author;
-this.price=price;
-this.numpages=numpages;
-}
-public String toString()
-{
-String name,author,price,numpages;
-name="Book name:"+this.name+"\n";
-author="Author name:"+this.author+"\n";
-price="Price:"+this.price+"\n";
-numpages="number of pages:"+this.numpages+"\n";
-return name+author+price+numpages;
-}
-}
-class Main
+import java.util.*;
+import CIE.*;
+import SEE.*;
+public class Main
 {
 public static void main(String args[])
 {
-Scanner s=new Scanner(System.in);
-int n,price,numpages,i;
-String author,name;
-System.out.println("enter the number of books");
-n=s.nextInt();
-Books b[]=new Books[n];
+    System.out.println("Vagisha Ajay");
+    System.out.println("1BM22CS346");   
+int n,i,j;
+double total[]=new double[5];
+Scanner sss=new Scanner(System.in);
+System.out.println("enter number of students:");
+n=sss.nextInt();
+Student s1[]=new Student[n];
+Internals si[]=new Internals[n];
+Externals se[]=new Externals[n];
 for(i=0;i<n;i++)
 {
-System.out.println("Book"+(i+1)+":");
-System.out.print("enter name of the book:");
-name=s.next();
-System.out.print("enter author of the book:");
-author=s.next();
-System.out.print("enter price of the book:");
-price=s.nextInt();
-System.out.print("enter number of pages of the book:");
-numpages=s.nextInt();
-b[i]=new Books(name,author,price,numpages);
-}
-for(i=0;i<n;i++)
+System.out.println("student details for student"+(i+1)+":");
+s1[i]=new Student();
+s1[i].student_details();
+si[i]=new Internals();
+si[i].internal_marks();
+se[i]=new Externals();
+se[i].external_marks();
+s1[i].display();
+System.out.println("total marks in 5 courses:");
+for(j=0;j<5;j++)
 {
-System.out.println("Book"+(i+1)+":\n"+b[i]);
+total[j]=si[i].imarks[j]+se[i].emarks[j];
+}
+for(j=0;j<5;j++)
+{
+System.out.println(total[j]);
 }
 }
 }
+}
+
+
 
