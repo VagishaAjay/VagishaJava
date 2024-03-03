@@ -5,8 +5,8 @@ public class Main
 {
 public static void main(String args[])
 {
-    System.out.println("Bhupendra Singh");
-    System.out.println("1BM22CS069");   
+    System.out.println("Vagisha Ajay");
+    System.out.println("1BM22Cs346");   
 int n,i,j;
 double total[]=new double[5];
 Scanner sss=new Scanner(System.in);
